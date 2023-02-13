@@ -1,4 +1,4 @@
-package com.start.mongo.repository.data;
+package com.start.mongo.repository.crud;
 
 
 import com.start.mongo.model.document.FcmToken;

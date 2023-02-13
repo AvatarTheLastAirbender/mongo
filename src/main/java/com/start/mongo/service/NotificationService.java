@@ -1,13 +1,13 @@
 package com.start.mongo.service;
 
 import com.start.mongo.helper.GlobalCommonService;
-import com.start.mongo.helper.NotificationPriority;
+import com.start.mongo.model.enums.NotificationPriority;
 import com.start.mongo.model.document.FcmToken;
 import com.start.mongo.model.document.User;
 import com.start.mongo.model.dto.notification.*;
 import com.start.mongo.repository.crud.UserRepository;
 import com.start.mongo.repository.data.FcmTokenDtoRepository;
-import com.start.mongo.repository.data.FcmTokenRepository;
+import com.start.mongo.repository.crud.FcmTokenRepository;
 import com.start.mongo.repository.data.PushNotificationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

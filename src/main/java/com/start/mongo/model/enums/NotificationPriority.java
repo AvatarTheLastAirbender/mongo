@@ -1,4 +1,4 @@
-package com.start.mongo.helper;
+package com.start.mongo.model.enums;
 
 @SuppressWarnings("unused")
 public enum NotificationPriority {

@@ -1,6 +1,6 @@
 package com.start.mongo.model.dto.request;
 
-import com.start.mongo.helper.UserType;
+import com.start.mongo.model.enums.UserType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

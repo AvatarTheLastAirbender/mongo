@@ -1,7 +1,7 @@
 package com.start.mongo.model.dto.notification;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.start.mongo.helper.ClickAction;
+import com.start.mongo.model.enums.ClickAction;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

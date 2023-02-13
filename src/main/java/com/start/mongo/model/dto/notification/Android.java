@@ -1,6 +1,6 @@
 package com.start.mongo.model.dto.notification;
 
-import com.start.mongo.helper.NotificationPriority;
+import com.start.mongo.model.enums.NotificationPriority;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
