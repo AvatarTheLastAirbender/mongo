@@ -2,7 +2,7 @@ package com.start.mongo.service;
 
 import com.start.mongo.model.document.Roles;
 import com.start.mongo.model.document.User;
-import com.start.mongo.model.dto.request.UserDto;
+import com.start.mongo.model.dto.request.SignUp;
 import com.start.mongo.repository.crud.RoleRepository;
 import com.start.mongo.repository.crud.UserRepository;
 import com.start.mongo.repository.data.UserDtoRepository;
@@ -42,17 +42,17 @@ public class UserService implements UserDtoRepository, UserDetailsService {
     }
 
     @Override
-    public void save(UserDto userDto) {
+    public void save(SignUp signUp) {
         User user = new User();
-        user.setUsername(userDto.getUsername());
-        user.setEmail(userDto.getEmail());
-        user.setPassword(bCryptPasswordEncoder.encode(userDto.getPassword()));
+        user.setUsername(signUp.getUsername());
+        user.setEmail(signUp.getEmail());
+        user.setPassword(bCryptPasswordEncoder.encode(signUp.getPassword()));
 
         String id = userRepository.save(user).getId();
 
         Roles userRoles = new Roles();
         userRoles.setUserId(id);
-        switch (userDto.getUserType()) {
+        switch (signUp.getUserType()) {
             case ADMIN:
                 userRoles.setRoles(List.of("ADMIN", "CUSTOMER", "SERVICE_PROVIDER"));
                 break;

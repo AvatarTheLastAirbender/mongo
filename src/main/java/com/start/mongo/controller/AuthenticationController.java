@@ -3,7 +3,7 @@ package com.start.mongo.controller;
 import com.start.mongo.config.utils.JwtTokenProvider;
 import com.start.mongo.helper.GlobalCommonService;
 import com.start.mongo.model.dto.request.Login;
-import com.start.mongo.model.dto.request.UserDto;
+import com.start.mongo.model.dto.request.SignUp;
 import com.start.mongo.model.dto.response.JsonToken;
 import com.start.mongo.repository.crud.UserRepository;
 import com.start.mongo.service.UserService;
@@ -68,7 +68,7 @@ public class AuthenticationController {
 
 
     @PostMapping("/user")
-    public ResponseEntity<?> saveUser(@RequestBody UserDto user) {
+    public ResponseEntity<?> saveUser(@RequestBody SignUp user) {
         String responseMessage;
         HttpStatus responseStatus = HttpStatus.NOT_ACCEPTABLE;
 
